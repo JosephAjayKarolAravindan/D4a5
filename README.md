@@ -32,10 +32,10 @@ filesystem client transparently creates a hidden file, .filename.crc, in the sam
 When hadoop client wants to write a file into hadoop ,it asks namenode where it can write these files.
 The namenode checks its metadata and finds the datanodes where it can write this file.This file is divided into blocks if its size is more than the default block size.
 Then the blocks are copied into various datanodes considering the replication factor.
-a.Client request Name node to provide which data nodes to write.
-b.Client writes block to one data node directly.
-c.Data node then forwards write request to next data node(replication).
-d.Cycle repeats for next block.
+Client request Name node to provide which data nodes to write.
+Client writes block to one data node directly.
+Data node then forwards write request to next data node(replication).
+Cycle repeats for next block.
 
 
 
